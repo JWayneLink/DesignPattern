@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.WebAPI", "DesignPattern.WebAPI\DesignPattern.WebAPI.csproj", "{D4086823-E98F-4FE7-B90D-0779A8A81A89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern.WebAPI", "DesignPattern.WebAPI\DesignPattern.WebAPI.csproj", "{D4086823-E98F-4FE7-B90D-0779A8A81A89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Model", "DesignPatter.Model\DesignPattern.Model.csproj", "{4EFE2CFD-77D0-453C-9FA3-739D23D36EA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern.DAL", "DesignPattern.DAL\DesignPattern.DAL.csproj", "{7F0127F7-B8B2-41E8-87BA-489027A61152}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.DAL", "DesignPattern.DAL\DesignPattern.DAL.csproj", "{7F0127F7-B8B2-41E8-87BA-489027A61152}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern.BLL", "DesignPattern.BLL\DesignPattern.BLL.csproj", "{70C002F2-34B6-4F0E-AC14-1A5102AC6C62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.BLL", "DesignPattern.BLL\DesignPattern.BLL.csproj", "{70C002F2-34B6-4F0E-AC14-1A5102AC6C62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern.Model", "DesignPattern.Model\DesignPattern.Model.csproj", "{944D051D-0A7E-494F-AFCA-524E53721543}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{D4086823-E98F-4FE7-B90D-0779A8A81A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4086823-E98F-4FE7-B90D-0779A8A81A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4086823-E98F-4FE7-B90D-0779A8A81A89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EFE2CFD-77D0-453C-9FA3-739D23D36EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EFE2CFD-77D0-453C-9FA3-739D23D36EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EFE2CFD-77D0-453C-9FA3-739D23D36EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EFE2CFD-77D0-453C-9FA3-739D23D36EA0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F0127F7-B8B2-41E8-87BA-489027A61152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F0127F7-B8B2-41E8-87BA-489027A61152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F0127F7-B8B2-41E8-87BA-489027A61152}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{70C002F2-34B6-4F0E-AC14-1A5102AC6C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70C002F2-34B6-4F0E-AC14-1A5102AC6C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70C002F2-34B6-4F0E-AC14-1A5102AC6C62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{944D051D-0A7E-494F-AFCA-524E53721543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{944D051D-0A7E-494F-AFCA-524E53721543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{944D051D-0A7E-494F-AFCA-524E53721543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{944D051D-0A7E-494F-AFCA-524E53721543}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

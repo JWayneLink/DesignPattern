@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DesignPatter.Model\DesignPattern.Model.csproj" />
     <ProjectReference Include="..\DesignPattern.DAL\DesignPattern.DAL.csproj" />
   </ItemGroup>
 

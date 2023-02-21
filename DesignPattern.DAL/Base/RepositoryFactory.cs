@@ -1,4 +1,4 @@
-﻿using DesignPatter.Model;
+﻿using DesignPattern.Model;
 using Ninject;
 using Ninject.Parameters;
 using System;

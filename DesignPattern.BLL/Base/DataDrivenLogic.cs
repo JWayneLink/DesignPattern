@@ -1,4 +1,4 @@
-﻿using DesignPatter.Model;
+﻿using DesignPattern.Model;
 using DesignPattern.DAL.Base;
 using System;
 using System.Collections.Generic;
