@@ -16,12 +16,15 @@ namespace DesignPattern.BLL.Base
     public class BusinessLogic : IBusinessLogic
     {
         public AppSettings AppSettings { get; private set; }
-        public BusinessLogic()
+        public IBusinessLogicFactory BusinessLogicFactory { get; private set; }
+        public BusinessLogic(IBusinessLogicFactory businessLogicFactory)
         {
             if (AppSettings == null)
             {
                 this.AppSettings = GetAppSettings();
             }
+
+            this.BusinessLogicFactory = businessLogicFactory;
         }
 
         // 讀取設定檔
@@ -46,6 +49,11 @@ namespace DesignPattern.BLL.Base
         {
             Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        protected virtual TLogic CreateLogic<TLogic>()
+        {
+            return this.BusinessLogicFactory.GetLogic<TLogic>();
         }
     }
 }

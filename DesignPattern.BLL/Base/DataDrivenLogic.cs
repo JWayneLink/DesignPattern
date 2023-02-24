@@ -24,7 +24,7 @@ namespace DesignPattern.BLL.Base
     {
         public IRepositoryFactory RepositoryFactory {get; private set;}
 
-        public DataDrivenLogic(IRepositoryFactory RepositoryFactory = null)
+        public DataDrivenLogic(IBusinessLogicFactory BusinessLogicFactory, IRepositoryFactory RepositoryFactory = null) : base(BusinessLogicFactory)
         {
             this.RepositoryFactory = RepositoryFactory ?? new RepositoryFactory(AppSettings);
         }

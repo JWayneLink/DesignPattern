@@ -11,7 +11,7 @@ namespace DesignPattern.BLL.Base
 {
     public interface IBusinessLogicFactory : IDisposable
     {
-        TLogic GetLogci<TLogic>();
+        TLogic GetLogic<TLogic>();
     }
     public class BusinessLogicFactory : IBusinessLogicFactory
     {
@@ -34,6 +34,11 @@ namespace DesignPattern.BLL.Base
                 .To<RegionLogic>()
                 .InSingletonScope()
                 .WithConstructorArgument(RepositoryFactory, context => null);
+            _kernel
+                .Bind<ICurrencyLogic>()
+                .To<CurrencyLogic>()
+                .InSingletonScope()
+                .WithConstructorArgument(RepositoryFactory, context => null);
         }
 
         public void Dispose()
@@ -45,7 +50,7 @@ namespace DesignPattern.BLL.Base
             GC.SuppressFinalize(this);
         }
 
-        public TLogic GetLogci<TLogic>()
+        public TLogic GetLogic<TLogic>()
         {
             return _kernel.Get<TLogic>();
         }

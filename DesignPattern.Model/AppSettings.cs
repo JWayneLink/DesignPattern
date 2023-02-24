@@ -11,5 +11,7 @@ namespace DesignPattern.Model
         public static readonly string FileName = "appsettings.json";
         public string Stage { get; set; } = default!;
         public Dictionary<string, Dictionary<string, string>> Connections { get; set; } = default!;
+
+        public Dictionary<string, string> PlaceHolderService { get; set; } = default!;
     }
 }

@@ -58,6 +58,11 @@ namespace DesignPattern.DAL.Base
                 .To<RegionRepository>()
                 .InSingletonScope()
                 .WithConstructorArgument(connection, context => null);
+            _kernel
+                .Bind<ICurrencyRepository>()
+                .To<CurrencyRepository>()
+                .InSingletonScope()
+                .WithConstructorArgument(connection, context => null);
         }
 
         public void Dispose()

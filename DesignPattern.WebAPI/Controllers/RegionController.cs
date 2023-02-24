@@ -20,7 +20,7 @@ namespace DesignPattern.WebAPI.Controllers
         {
             try
             {
-                return Ok(_factory.GetLogci<IRegionLogic>().ReadRegion());
+                return Ok(_factory.GetLogic<IRegionLogic>().ReadRegion());
             }
             catch (Exception ex)
             {
@@ -33,7 +33,7 @@ namespace DesignPattern.WebAPI.Controllers
         {
             try
             {
-                _factory.GetLogci<IRegionLogic>().CreateRegion(regionId, regionDescription);
+                _factory.GetLogic<IRegionLogic>().CreateRegion(regionId, regionDescription);
                 return Ok();
             }
             catch (Exception ex)
@@ -47,7 +47,7 @@ namespace DesignPattern.WebAPI.Controllers
         {
             try
             {
-                _factory.GetLogci<IRegionLogic>().UpdateRegion(regionId, regionDescription);
+                _factory.GetLogic<IRegionLogic>().UpdateRegion(regionId, regionDescription);
                 return Ok();
             }
             catch (Exception ex)
@@ -61,7 +61,7 @@ namespace DesignPattern.WebAPI.Controllers
         {
             try
             {
-                _factory.GetLogci<IRegionLogic>().DeleteRegion(regionId);
+                _factory.GetLogic<IRegionLogic>().DeleteRegion(regionId);
                 return Ok();
             }
             catch (Exception ex)

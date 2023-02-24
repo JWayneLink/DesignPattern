@@ -20,13 +20,14 @@ namespace DesignPattern.BLL
     }
     internal class RegionLogic : DataDrivenLogic, IRegionLogic
     {
-        public RegionLogic(IRepositoryFactory RepositoryFactory = null) : base(RepositoryFactory)
+        public RegionLogic(IBusinessLogicFactory BusinessLogicFactory, IRepositoryFactory RepositoryFactory = null) : base(BusinessLogicFactory, RepositoryFactory)
         {
         }
 
         public IEnumerable<Region> ReadRegion()
         {
             var dbContext = CreateSqlRepository<IRegionRepository>(Database.Northwind);
+            var currency = CreateLogic<ICurrencyLogic>().ReadCurrency();
             return dbContext.Read();
         }
 
