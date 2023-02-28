@@ -14,6 +14,11 @@ namespace DesignPattern.DAL.Base
         /// 資料庫連線
         /// </summary>
         IDbConnection Connection { get; }
+
+        public TEntity Create<TEntity>(TEntity CreateModel);
+        public TEntity Update<TEntity>(TEntity UpdateModel);
+        public IEnumerable<TEntity> Read<TEntity>();
+        public void Delete<TEntity>(int Id);
     }
     internal abstract class SQLRepository : ISQLRepository
     {
@@ -32,7 +37,6 @@ namespace DesignPattern.DAL.Base
             }
         }
 
-
         public void Dispose()
         {
             Dispose(true);
@@ -50,5 +54,24 @@ namespace DesignPattern.DAL.Base
         /// <returns></returns>
         protected virtual CommandDefinition GetCommand(CommandType SqlCommandType, string SqlCommandText, object Parameters = null, IDbTransaction Transaction = null, int Timeout = 30) => new CommandDefinition(SqlCommandText, Parameters, commandType: SqlCommandType, transaction: Transaction, commandTimeout: Timeout);
 
+        public TEntity Create<TEntity>(TEntity CreateModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public TEntity Update<TEntity>(TEntity UpdateModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<TEntity> Read<TEntity>()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete<TEntity>(int Id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
